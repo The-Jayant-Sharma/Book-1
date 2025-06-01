@@ -5,4 +5,84 @@ Everything begun in the early $16$-th century, mathematicians were being haunted
 The observation was simple, \emph{how does one solve equations like} $x^2 + 1 = 0$?
 Pioneers like cardano, in his famous work was working on the theory of polynomials, and later brought the attention of people to this surprisingly simple yet haunting problem, \emph{"does there exists a number, which when squared, gives negative of unity?"} 
 Now, why the question pondered on only \emph{unity} but not some other element is simple.
-Mathematicians observed that, if since we solved the mystery for unity, it will automatically imply the solution for all other real elements.Singe they all knew deeply, that if we somehow s
+Mathematicians observed that, if since we solved the mystery for unity, it will automatically imply the solution for all other real elements.Since they all knew deeply, that if we somehow defined,
+\[
+i^2 = -1
+\]
+It will always make sense that, for any $x \in \mathbb{R}$,
+\[
+(i\cdot x)^2 = -x
+\]
+
+Due to this simple property of unity, it was assumed special.
+But the problem, wasn't as easy as it seems. The pioneers of that time, we oblivious to the complex plane, and hence they knew that the mysterious $i$, which can give sense to $i^2 = -1$, doesn't exists within the realm of real numbers.
+
+This chaos was at its peak, until in $1572$ a magician of numbers stepped in the arena, \emph{Rafael Bombelli} was the first mathematician to \emph{trust algebra} and define systematically,
+\[
+\sqrt{-1} \cdot \sqrt{-1} = -1
+\]
+But, why others never dared to define this simple relation?
+The answer is deep, \emph{rigour}. Mathematics operates on rigour, and logic, not on assumptions. We never defined the square root operator to have the \emph{negative real numbers, within it}, hence we were afraid if this can lead us towards an abyss, but the path was towards the divine truth.
+
+
+Later on, to take the Storms, two pioneers stepped in the game, and revolutionized everything forever. Their names were \emph{Caspar Wessel} (1797) and \emph{Jean-Robert Argand} (1806).
+They observed that, the real numbers and the mysterious element $i$ were never there to shake the truth, instead to reveal it. They observed that, if purely real numbers $(1, 2, \sqrt{2} \dots )$ and purely \emph{imaginary} numbers $(i, 2i, \sqrt{2} i)$ exist, then numbers in the form, $(a + bi)$ exist too. 
+For their complex form, for that time, they were given the name \emph{Complex Numbers} and were denoted by the symbol $\mathbb{C}$ throughout.
+
+These two pioneers deeply observed that how, \emph{multiplication works as scaling}, that is, if an element $a \in \mathbb{R}$ is multiplied by another element $b \in \mathbb{R}$ then the result $a \cdot b$, represents the scaling of $a$ by a factor of $b$.
+And afterwards shifted their attention to the property $i\cdot i = -1$, they observed that it completes a scaling of $\pi-radians$. In other words, if we write $1 \cdot i \cdot i$ that is $-1$, then we just simply completed a \emph{semi-circle} starting from $1$ and ending to $-1$. 
+
+\begin{center} 
+\begin{tikzpicture}[scale=2]
+
+  % Draw the semicircle
+  \draw[thick, ->, postaction={decorate},
+        decoration={markings, mark=at position 0.6 with {\arrow{>}}}]
+    (1,0) arc (0:180:1);
+
+  % Draw the diameter (optional, for clarity)
+  \draw[dashed] (-1,0) -- (1,0);
+
+  % Points on ends
+  \filldraw (-1,0) circle (0.03);
+  \filldraw (1,0) circle (0.03);
+
+  % Labels
+  \node[below] at (-1,0) {$-1$};
+  \node[below] at (1,0) {$1$};
+
+\end{tikzpicture}
+*Displaced by $\pi$-radians.
+\end{center}
+
+They believed in the dark and kept asking, \emph{if the multiplication by $i$ is done twice, the number gets displaced by $\pi$ radians, then can it imply that, multiplying by $i$ once does displaced the unity by $\frac{\pi}{2}$-radians, (also note how $i^4 = 1$)}.
+
+This was yet an intuition, but it pointed towards the $2$-Dimmensional structure.
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5, >=stealth]
+
+  % Axes
+  \draw[->] (-2.2,0) -- (2.2,0) node[right] {$\Re$};
+  \draw[->] (0,-2.2) -- (0,2.2) node[above] {$\Im$};
+
+  % Points
+  \filldraw[blue] (1,0) circle (0.05) node[below right] {$1$};
+  \filldraw[blue] (-1,0) circle (0.05) node[below left] {$-1$};
+  \filldraw[red] (0,1) circle (0.05) node[above right] {$i$};
+  \filldraw[red] (0,-1) circle (0.05) node[below right] {$-i$};
+  \filldraw[black] (0,0) circle (0.04) node[below left] {$0$};
+
+  % Optional grid lines (dashed)
+  \draw[dashed, gray] (1,0) -- (1,1);
+  \draw[dashed, gray] (-1,0) -- (-1,1);
+  \draw[dashed, gray] (0,1) -- (1,1);
+  \draw[dashed, gray] (0,-1) -- (1,-1);
+
+\end{tikzpicture}
+\end{center}
+
+This led us to the conclusion that every complex numbers in the form $z = a + ib, \quad z (a, b) \in \mathbb{R}$, is a point in the above $2$-Dimmensional \emph{Argand plane} above. And each of them can be denoted by a \emph{Position vector}.
+
+This was the thought process, which initiated the very roots of \emph{Complex Numbers}. And later the study of \emph{Complex-Valued Functions} which we called \emph{Complex Analysis}.
+And since it was $i$ which followed and satisfied the \emph{Orthogonal Thought Process}, that is the reason why we have $i, 2i, 3i, \dots$ on the orthogonal axis, but not $\sqrt{-1}, 2\sqrt{-1}, 3\sqrt{-1} \dots$.
