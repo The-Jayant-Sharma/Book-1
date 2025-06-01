@@ -1,0 +1,69 @@
+\documentclass[10pt, oneside]{book}
+
+% ---------- Essential Packages ----------
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern} % Clean, scalable font
+\usepackage{microtype} % Better spacing
+
+% ---------- Math Packages ----------
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{mathtools} % Enhancements for amsmath
+\usepackage{mathrsfs}  % Optional: script fonts like \mathscr
+
+% ---------- Page Geometry ----------
+\usepackage[a4paper, margin=1in]{geometry}
+
+% ---------- Theorem Environments ----------
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{example}{Example}[chapter]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+% ---------- Custom Commands ----------
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Arg}{\operatorname{Arg}}
+
+% ---------- Title Info ----------
+\title{\Huge \textbf{Book I}}
+\author{\textsc{Jayant Sharma}}
+\date{\today}
+
+% ---------- Header/Footer ----------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[CE]{\textsc{Complex Analysis}}
+\fancyhead[CO]{\leftmark}
+
+% ---------- Table of Contents ----------
+\usepackage{tocloft}
+\setcounter{tocdepth}{2}
+
+% ---------- Hyperlinks ----------
+\usepackage[colorlinks=true, linkcolor=black, citecolor=teal, urlcolor=black]{hyperref}
+
+% ---------- Document ----------
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\chapter*{Preface}
+\addcontentsline{toc}{chapter}{Preface}
+This book is an open-source learning journey into the depths of complex analysis. It captures the insights, questions, and breakthroughs of a young mathematician on the path to discovery — Jayant Sharma. You may find mistakes, but you'll also find clarity, intuition, and the fire of original thinking.
+
+\input{chapters/chapter-1}
+
+\end{document}
